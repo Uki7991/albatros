@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class BookingController extends Controller
 {
 	public function index() {
-		$numbers = DB::select('select name from hotel_numbers');
+		$numbers = DB::select('select * from hotel_numbers');
 		return view('book.booking', ['numbers' => $numbers]);
 	}
 
@@ -27,6 +27,20 @@ class BookingController extends Controller
     		$book->leaving_year = $request->leaving_year;
     		$book->hotel_number = $request->hotel_number;
     		$book->save();
+
+            echo $request->name;
+            echo $request->last_name;
+            echo $request->phone_number;
+            echo $request->coming_day;
+            echo $request->coming_month;
+            echo $request->coming_year;
+            echo $request->leaving_day;
+            echo $request->leaving_month;
+            echo $request->leaving_year;
+            echo $request->hotel_number;
+            //return redirect('/');
     	}
+        else
+            return redirect('/login');
     }
 }

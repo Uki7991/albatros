@@ -34,46 +34,47 @@
                             </div>
                         </div>
                         <div class="row">
-                            <select>
+                            <select name="coming_day">
                             @for ($i = 1; $i < 32; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
-                            <select>
+                            <select name="coming_month">
                             @for ($i = 1; $i < 13; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
-                            <select>
+                            <select name="coming_year">
                             @for ($i = 2017; $i < 2021; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
                         </div>
                         <div class="row">
-                            <select>
+                            <select name="leaving_day">
                             @for ($i = 1; $i < 32; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
-                            <select>
+                            <select name="leaving_month">
                             @for ($i = 1; $i < 13; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
-                            <select>
+                            <select name="leaving_year">
                             @for ($i = 2017; $i < 2021; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
                         </div>
                         <div class="row">
-                            <select>
+                            <select name="hotel_number">
                             @foreach ($numbers as $number)
-                                <option name="hotel_number">$number->name</option>
+                                <option value="{{ $number->id }}">{{ $number->name }}</option>
                             @endforeach
                             </select>
                         </div>
+                        <button type="submit" class="btn btn-success">Success</button>
                     </form>
                 </div>
             </div>
