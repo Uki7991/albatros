@@ -35,34 +35,34 @@
                         </div>
                         <div class="row">
                             <select>
-                            @for ($i = 1; i < 32; i++)
+                            @for ($i = 1; $i < 32; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
                             <select>
-                            @for ($i = 1; i < 13; i++)
+                            @for ($i = 1; $i < 13; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
                             <select>
-                            @for ($i = 2017; i < 2021; i++)
+                            @for ($i = 2017; $i < 2021; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
                         </div>
                         <div class="row">
                             <select>
-                            @for ($i = 1; i < 32; i++)
+                            @for ($i = 1; $i < 32; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
                             <select>
-                            @for ($i = 1; i < 13; i++)
+                            @for ($i = 1; $i < 13; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
                             <select>
-                            @for ($i = 2017; i < 2021; i++)
+                            @for ($i = 2017; $i < 2021; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
