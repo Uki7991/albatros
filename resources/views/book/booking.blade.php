@@ -30,18 +30,24 @@
                         </div><!-- /.row -->
                         <div class="row">
                             <div class="col-md-12">
-                                <input type="text" name="phone_number" class="form-control">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <label>Номер телефона</label>
+                                    </span>
+                                    <input type="text" name="phone_number" class="form-control" placeholder="996123456789">
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <select name="coming_day">
                             @for ($i = 1; $i < 32; $i++)
-                                <option>{{ $i }}</option>
+                                
+                                <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option> 
                             @endfor
                             </select>
                             <select name="coming_month">
                             @for ($i = 1; $i < 13; $i++)
-                                <option>{{ $i }}</option>
+                                <option>@if($i < 10){{ 0 }}@endif{{ $i }}</option>
                             @endfor
                             </select>
                             <select name="coming_year">
@@ -53,12 +59,12 @@
                         <div class="row">
                             <select name="leaving_day">
                             @for ($i = 1; $i < 32; $i++)
-                                <option>{{ $i }}</option>
+                                <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option>
                             @endfor
                             </select>
                             <select name="leaving_month">
                             @for ($i = 1; $i < 13; $i++)
-                                <option>{{ $i }}</option>
+                                <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option>
                             @endfor
                             </select>
                             <select name="leaving_year">
