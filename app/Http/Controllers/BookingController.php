@@ -38,7 +38,7 @@ class BookingController extends Controller
             echo $request->leaving_month;
             echo $request->leaving_year;
             echo $request->hotel_number;
-            //return redirect('/');
+            return redirect('/');
     	}
         else
             return redirect('/login');
