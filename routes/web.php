@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index');
@@ -22,3 +23,5 @@ Route::get('/admin', 'HomeController@index');
 Route::get('/book', 'BookingController@index');
 
 Route::post('/bookCreate', 'BookingController@create');
+
+Route::get('/room/{id}', 'BookingController@info');

@@ -17,7 +17,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-    	$books = DB::select('select * from bookings');
+        $books = DB::table('bookings')
+                        ->orderBy('id','desc')
+                        ->get();
         return view('home', ['books' => $books]);
     }
+
+    
 }
