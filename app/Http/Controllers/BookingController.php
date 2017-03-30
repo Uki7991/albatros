@@ -9,10 +9,9 @@ use Illuminate\Support\Facades\DB;
 class BookingController extends Controller
 {
 	public function index() {
-		$numbers = DB::table('bookings');
-        var_dump($numbers->id);
-		return view('book.booking', ['numbers' => $numbers]);
-	}
+        $numbers = DB::select('select name from hotel_numbers');
+        return $numbers;
+    }
 
     public function create(Request $request) {
     	if($request) {

@@ -18,6 +18,31 @@ $(document).ready(function(){
     jQuery("html:not(:animated),body:not(:animated)").animate({
       scrollTop: destination
     }, 800);
-    return false;
+    //return false;
   });
+
+
+
+    $('.booking-btn').click(function() {
+      $('.modal-form').animate({
+        marginLeft: '0px'
+      }, 500, "swing");
+    });
+    $('.fa-times').click(function() {
+      $('.modal-form').animate({
+        marginLeft: '-500px'
+      }, 500, "swing");
+    });
+
+
+    $.ajax({
+      url: "/book",
+      success: function(data) {
+        for (var i = 0; i <= data.length - 1; i++) {
+          $('#hotel_number').append('<option>' + data[i].name + '</option>')
+        };
+      },
+      dataType: "json"
+    });
+
 });

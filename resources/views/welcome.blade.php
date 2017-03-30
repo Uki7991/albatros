@@ -53,34 +53,34 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-4 card">
-            <a href="/room/1"><img src="img/cards/1.jpg" class="img-responsive" alt="Responsive image"></a>
+            <a href="/room/1"><img src="img/rooms/budget/budget.jpg" class="img-responsive" alt="Responsive image"></a>
             <h3>Бюджетный двухместный номер с одной кроватью</h3>
             <p class="desc">Площадь номера 30 м<sup>2</sup></p>
-            <a href="/book" class="btn btn-info">59$/ 4140 сом</a>
+            <a  class="btn btn-info booking-btn">59$/ 4140 сом</a>
           </div>
           <div class="col-xs-4 card">
-            <a href="/room/2"><img src="img/cards/2.jpg" class="img-responsive" alt="Responsive image"></a>
+            <a href="/room/2"><img src="img/rooms/standart/standart.jpg" class="img-responsive" alt="Responsive image"></a>
             <h3>Стандартный 2-х местный номер с раздельными кроватями</h3>
             <p class="desc">Площадь номера 35 м<sup>2</sup></p>
-            <a href="/book" class="btn btn-success">73$ / 5175 сом</a>
+            <a  class="btn btn-success booking-btn">73$ / 5175 сом</a>
           </div>
           <div class="col-xs-4 card">
-            <a href="/room/3"><img src="img/cards/3.jpg" class="img-responsive" alt="Responsive image"></a>
+            <a href="/room/3"><img src="img/rooms/improved/imp.jpg" class="img-responsive" alt="Responsive image"></a>
             <h3>Улучшенный двухместный номер с 1 кроватью</h3>
             <p class="desc">Площадь номера 35 м<sup>2</sup></p>
-            <a href="/book" class="btn btn-danger">73$ / 5175 сом</a>
+            <a  class="btn btn-danger booking-btn">73$ / 5175 сом</a>
           </div>
           <div class="col-xs-4 card col-md-offset-2">
-            <a href="/room/4"><img src="img/cards/card.jpg" class="img-responsive" alt="Responsive image"></a>
+            <a href="/room/4"><img src="img/rooms/kingSize/king.jpg" class="img-responsive" alt="Responsive image"></a>
             <h3>Улучшенный номер с кроватью размера "king-size"</h3>
             <p class="desc">Площадь номера 50 м<sup>2</sup></p>
-            <a href="/book" class="btn btn-primary">93$ / 6555 сом</a>
+            <a  class="btn btn-primary booking-btn">93$ / 6555 сом</a>
           </div>
           <div class="col-xs-4 card">
-            <a href="/room/5"><img src="img/cards/5.jpg" class="img-responsive" alt="Responsive image"></a>
+            <a href="/room/5"><img src="img/rooms/luxe/luxe.jpg" class="img-responsive" alt="Responsive image"></a>
             <h3>Номер "Люкс"</h3>
             <p class="desc">Площадь номера 50 м<sup>2</sup></p>
-            <a href="/book" class="btn btn-warning">122$ / 8625 сом</a>
+            <a  class="btn btn-warning booking-btn">122$ / 8625 сом</a>
           </div>
         </div>
       </div>
@@ -88,6 +88,8 @@
     </section>
 
 
+
+    
 
     <section id="galery" class="tour hidden-sm hidden-xs hidden-xs">
       
@@ -210,13 +212,13 @@
                   <div class="col-xs-3 service"><img src="img/inhotel/inhotel-1.jpg" alt=""></div>
                   <div class="col-xs-3 service"><img src="img/inhotel/inhotel-2.jpg" alt=""></div>
                   <div class="col-xs-3 service"><img src="img/inhotel/inhotel-3.jpg" alt=""></div>
-                  <div class="col-xs-3 service"><img src="img/inhotel/inhotel-4.jpg" alt=""></div>
+                  <div class="col-xs-3 service"><img class="wh" src="img/inhotel/inhotel-4.jpg" alt=""></div>
             </div>
               </div>
             <div class="wrapp imeg row">
               <div class="col-xs-3 service"><img src="img/inhotel/inhotel-5.jpg" alt=""></div>
               <div class="col-xs-3 service"><img src="img/inhotel/inhotel-6.jpg" alt=""></div>
-              <div class="col-xs-3 service"><img src="img/inhotel/inhotel-7.jpg" alt=""></div>
+              <div class="col-xs-3 service"><img class="wh" src="img/inhotel/inhotel-7.jpg" alt=""></div>
               <div class="col-xs-3 service"><img src="img/inhotel/inhotel-8.jpg" alt=""></div>
             </div>
             <div class="wrapp">

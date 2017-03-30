@@ -27,6 +27,82 @@
     <div id="go-top" class="animated fadeIn">
         <a href="javascript:void(0)"><i class="fa fa-arrow-circle-o-up"></i></a>
     </div>
+
+    <div class="modal-form col-md-3 col-xs-10">
+      <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+      <div>
+        <h4>Бронирование</h4>
+            <form action="/bookCreate" method="POST" class="form-horizontal">
+                        {{ csrf_field() }}
+                      
+                            <div>
+                                <div class="input-group">
+                                    <label for="inputEmail3" class="control-label">Имя <i>*</i></label>
+                                
+                                <input type="text" class="form-control" name="name">
+                                </div><!-- /input-group -->
+                            </div><!-- /.col-lg-6 -->
+                            <div>
+                                <div class="input-group">
+                                    <label for="inputEmail3" class="control-label">Фамилия <i>*</i></label>
+                                    <input type="text" class="form-control" name="last_name">
+                                </div><!-- /input-group -->
+                            </div><!-- /.col-lg-6 -->
+                              <div>
+                                <div class="input-group">
+                                    <label for="inputEmail3" class="control-label">Номер телефона <i>*</i></label>
+                                    <input type="text" name="phone_number" class="form-control" placeholder="996123456789">
+                                </div>
+                            </div>
+            
+                          
+                        <div class="row">
+                            <label for="">Дата приезда: <i>*</i></label>
+                            <select name="coming_day">
+                            @for ($i = 1; $i < 32; $i++)
+                                
+                                <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option> 
+                            @endfor
+                            </select>
+                            <select name="coming_month">
+                            @for ($i = 1; $i < 13; $i++)
+                                <option>@if($i < 10){{ 0 }}@endif{{ $i }}</option>
+                            @endfor
+                            </select>
+                            <select name="coming_year">
+                            @for ($i = 2017; $i < 2021; $i++)
+                                <option>{{ $i }}</option>
+                            @endfor
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="">Дата выезда: <i>*</i></label>
+                            <select name="leaving_day">
+                            @for ($i = 1; $i < 32; $i++)
+                                <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option>
+                            @endfor
+                            </select>
+                            <select name="leaving_month">
+                            @for ($i = 1; $i < 13; $i++)
+                                <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option>
+                            @endfor
+                            </select>
+                            <select name="leaving_year">
+                            @for ($i = 2017; $i < 2021; $i++)
+                                <option>{{ $i }}</option>
+                            @endfor
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="">Тип номера: <i>*</i></label>
+                            <select name="hotel_number" id="hotel_number">
+                              
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg">Забронировать</button>
+                    </form>
+      </div>
+    </div>
     
 
 
@@ -58,7 +134,7 @@
               <li><a class="scrollto" href="/#info">О нас</a></li>
               <li><a class="scrollto" href="/#service">Услуги</a></li>
               <li><a class="scrollto" href="/#contacts">Контакты</a></li>
-              <li><a href="/book" class="special-link">Бронирование</a></li>
+              <li><a class="special-link .booking-btn">Бронирование</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

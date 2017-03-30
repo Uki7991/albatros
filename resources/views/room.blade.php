@@ -17,16 +17,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner room " role="listbox">
                           <div class="item active">
-                            <img src="/img/cards/2.jpg" alt="...">
-                            <div class="carousel-caption">
-                              
-                            </div>
+                            <img src="{{ $room->imgPath }}" alt="...">
                           </div>
                           <div class="item">
-                            <img src="/img/cards/2.jpg" alt="...">
-                            <div class="carousel-caption">
-                              
-                            </div>
+                            <img src="{{ $room->imgPath2 }}" alt="...">
+                          </div>
+                          <div class="item">
+                            <img src="{{ $room->imgPath3 }}" alt="...">
                           </div>
                           
                         </div>
