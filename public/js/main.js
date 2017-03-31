@@ -30,19 +30,28 @@ $(document).ready(function(){
     });
     $('.fa-times').click(function() {
       $('.modal-form').animate({
-        marginLeft: '-500px'
+        marginLeft: '-2000px'
       }, 500, "swing");
     });
 
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
     $.ajax({
       url: "/book",
       success: function(data) {
         for (var i = 0; i <= data.length - 1; i++) {
-          $('#hotel_number').append('<option>' + data[i].name + '</option>')
+          $('#hotel_number').append('<option value="' + data[i].id +'">' + data[i].name + '</option>')
         };
       },
       dataType: "json"
     });
+
+
+    
 
 });

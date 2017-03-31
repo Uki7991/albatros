@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class BookingController extends Controller
 {
 	public function index() {
-        $numbers = DB::select('select name from hotel_numbers');
+        $numbers = DB::select('select * from hotel_numbers');
         return $numbers;
     }
 
@@ -30,7 +30,7 @@ class BookingController extends Controller
             return redirect('/');
     	}
         else
-            return redirect('/login');
+            return redirect('/register');
     }
 
     public function info($id) {

@@ -41,10 +41,10 @@ body {
 }
 
 .nav {
-	font-size: 18px;
+	font-size: 16px;
 	height: 80px;
 	padding: 10px;
-	font-weight: 600;
+	font-weight: 500;
 	margin-top: 10px;
 	
 }
@@ -58,16 +58,17 @@ body {
 .nav>li>a:hover{
 	text-decoration: none;
 	color: #fff !important;
-	border-bottom: 3px solid #fff;
+	`border-bottom: 2px solid #fff;
+	border-bottom: double;
 }
-
-.nav>li>a {
+.nav li>a {
 	color: #fff !important;
 }
 
 
 .navbar-default {
-	background-color: #6B1312;
+	`background-color: #6B1312;
+	background: url(../img/backgrounds/fon.jpg);
 }
 .navbar-default .navbar-nav>li>a{
 	color: #fff;
@@ -89,7 +90,7 @@ body {
 .carousel-inner .item img{
 
 	position: relative;
-	height: 500px;
+	height: 580px;
 	width: 100%;
 }
 .carousel{
@@ -111,6 +112,10 @@ body {
     position: relative;
     z-index: 5;
 }
+span img{
+	width: 300px;
+	height: 50px;
+}
 
 .numbers {
 	margin-top: 150px;
@@ -118,8 +123,8 @@ body {
 	margin-bottom: 100px;
 }
 
-.numbers>h2 {
-	font-weight: 600;
+h2 {
+	font-weight: 500;
 }
 
 .card {
@@ -194,9 +199,6 @@ body {
 	margin: 50px 0px;
 }
 
-.img-responsive{
-
-}
 
 .inhotel p{
 	font-weight: 600;
@@ -211,6 +213,10 @@ body {
     margin-right: auto;
     margin-bottom: 10px;
     display: block;
+}
+
+#service{
+	text-align: center;
 }
 
 .service{
@@ -236,6 +242,9 @@ footer {
 	font-weight: 700;
 }
 
+#contacts{
+	text-align: center;
+}
 .contacts {
 	padding: 15px;
 	text-align: center;
@@ -270,7 +279,8 @@ footer {
 }
 
 h2 {
-	color: #545454 !important;
+	color: #D9534F!important;
+	margin-bottom: 0px !important;
 }
 /*MOBILE*/
 #mobile{
@@ -287,26 +297,31 @@ h2 {
 	background: url(../img/main-slide.jpg);
 	height: 150px;
 	background-size: cover;
-	background-position: left bottom;
+	background-position: center;
 	padding-top: 30px;
 }
 .container-mobile{
 	border: 1px solid #3e3e3e;
-	margin: 80px 20px 0px;
+	margin: 80px auto 0px;
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	padding: 0px !important;
 }
-.container-mobile ul li{
+.container-mobile ul a li {
 	padding: 10px;
-	color: #aaa;
 	font-size: 15px;
 	font-weight: 700;
 	line-height: 1.6em;
 	border-bottom: 1px solid #aaa;
 }
-.container-mobile ul :last-child{
+.container-mobile ul a {
+	text-decoration: none;
+}
+.container-mobile ul a li:hover{
+	background-color: #118FC9;
+}
+.container-mobile ul a li :last-child{
 	border-bottom: none;
 }
 .fa {
@@ -348,23 +363,36 @@ h2 {
 	background: rgba(193,194,193,0.7);
 	text-align: center;
 }
-.book .input-group {
-	margin: 5px;
-}
-.book input{
+
+.form-horizontal input{
 	background-color: #e3e3e3;
+	font-style: italic;
+	width: 100% !important;
 }
-.book select{
+.form-horizontal select{
+	font-style: italic;
 	padding: 5px;
 	margin-top: 10px;
 	margin-bottom: 5px;
 	background-color: #e3e3e3;
 }
-.book i{
-	color: red;
+
+#hotel_number{
+	width: 100%;
 }
-.book button{
-	margin-top: 50px;
+
+.form-horizontal select option{
+	padding: 2px;
+	font-size: inherit;
+}
+.form-horizontal select option:hover{
+	font-size: 1.2em;
+}
+.form-horizontal i{
+	color: red !important;
+}
+.form-horizontal button{
+	margin-top: 30px !important;
 }
 .room .item img{
 	position: relative;
@@ -385,7 +413,7 @@ h2 {
 	border-radius: 5px;
 }
 .room-desc a{
-	margin-top: 30px;
+	margin-top: 10px;
 }
 .room-desc p{
 	font-size: 18px;
@@ -429,8 +457,8 @@ h3 {
 	display: block;
 	position: fixed;
 	height: 700px;
-	background-color: #3e3e3e;
-	margin-left: -500px;
+	background-color: rgba(0,0,0,0.8);
+	margin-left: -2000px;
 	z-index: 9999;
 	padding: 60px;
 	color: #fff;
@@ -446,7 +474,10 @@ h3 {
 }
 
 .modal-form h4 {
+	position: relative;
+	text-align: center;
 	font-size: 24px;
+	color: red;
 }
 
 .modal-form .row {
@@ -459,7 +490,26 @@ h3 {
 	top: 10px;
 	right: 10px;
 }
-
+.booking-btn{
+	cursor: pointer;
+}
+.rooms .row{
+	margin-top: 10px;
+	border-bottom: 1px solid #000;
+	padding-bottom: 10px;
+	padding-top: 5px; 
+}
+.rooms h3{
+	font-weight: 500;
+	margin-bottom: 5px !important;
+}
+.rooms p{
+	font-size: 9px;
+}
+.rooms .btn{
+	padding: 4px;
+	font-size: 12px !important;
+}
 /*Galery slide*/
  /* jssor slider arrow navigator skin 05 css */
         /*
@@ -504,6 +554,7 @@ h3 {
 		font-size: 8px;
 	}
 
+
 	#mobile{
 		display: block !important;
 	}
@@ -513,6 +564,18 @@ h3 {
 
 	h2 {
 		font-size: 24px !important; 
+	}
+	h3 {
+		margin-top: 0 !important;
+		margin-bottom: 20px !important;
+	}
+	.room-desc p{
+		font-size: 14px;
+		display: inline-block;
+		float: right;
+	}
+	.room-section {
+		margin-top: 0px;
 	}
 	.lg-content{
 		display: none;

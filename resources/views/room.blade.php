@@ -17,13 +17,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner room " role="listbox">
                           <div class="item active">
-                            <img src="{{ $room->imgPath }}" alt="...">
+                            <img src="{{ $room->imgPath }}" alt="Изображение номера">
                           </div>
                           <div class="item">
-                            <img src="{{ $room->imgPath2 }}" alt="...">
+                            <img src="{{ $room->imgPath2 }}" alt="Изображение номера">
                           </div>
                           <div class="item">
-                            <img src="{{ $room->imgPath3 }}" alt="...">
+                            <img src="{{ $room->imgPath3 }}" alt="Изображение номера">
                           </div>
                           
                         </div>
@@ -38,7 +38,11 @@
                         </a>
                      </div>      
                 </div>
+                
                 <div class="col-md-6 room-desc">
+                  <div class="col-xs-12 hidden-md hidden-lg">
+                    <img class="img-responsive" src="{{ $room->imgPath }}">
+                  </div>
                     <div class="desription">
                         <h4>Оснащение номера:</h4>
                         <ul>
@@ -51,10 +55,12 @@
                             <li>Интернет (Wi-Fi / Internet)</li>
                         </ul>
                     </div>
-                    <p class="pull-right">{!! $room->roomDesc !!}
-                        <p>{{ $room->price }} сом</p>
-                    </p>
-                    <a href="/book" class="btn {{ $room->btnClass }}">Забронировать</a>
+                    <div class="row">
+                      <p class="pull-left">{{ $room->price }} сом</p>
+                      <p class="pull-right">{!! $room->roomDesc !!}</p>
+                    </div>
+                    
+                    <a class="btn booking-btn {{ $room->btnClass }}">Забронировать</a>
 
                 </div>
             </div>
