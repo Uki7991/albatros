@@ -25,3 +25,10 @@ Route::get('/book', 'BookingController@index');
 Route::post('/bookCreate', 'BookingController@create');
 
 Route::get('/room/{id}', 'BookingController@info');
+
+Route::get('/rooms', function() {
+	return view('rooms');
+});
+Route::get('/map', function() {
+	return view('map');
+});

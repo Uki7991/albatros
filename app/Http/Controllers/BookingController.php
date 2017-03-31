@@ -9,28 +9,24 @@ use Illuminate\Support\Facades\DB;
 class BookingController extends Controller
 {
 	public function index() {
-        $numbers = DB::select('select name from hotel_numbers');
+        $numbers = DB::select('select * from hotel_numbers');
         return $numbers;
     }
 
     public function create(Request $request) {
-    	if($request) {
-    		$book = new Booking();
-    		$book->name = $request->name;
-    		$book->last_name = $request->last_name;
-    		$book->phone_number = $request->phone_number;
-    		$book->coming_day = $request->coming_day;
-    		$book->coming_month = $request->coming_month;
-    		$book->coming_year = $request->coming_year;
-    		$book->leaving_day = $request->leaving_day;
-    		$book->leaving_month = $request->leaving_month;
-    		$book->leaving_year = $request->leaving_year;
-    		$book->hotel_number = $request->hotel_number;
-    		$book->save();
-            return redirect('/');
-    	}
-        else
-            return redirect('/login');
+		$book = new Booking();
+		$book->name = $request->name;
+		$book->last_name = $request->last_name;
+		$book->phone_number = $request->phone_number;
+		$book->coming_day = $request->coming_day;
+		$book->coming_month = $request->coming_month;
+		$book->coming_year = $request->coming_year;
+		$book->leaving_day = $request->leaving_day;
+		$book->leaving_month = $request->leaving_month;
+		$book->leaving_year = $request->leaving_year;
+		$book->hotel_number = $request->hotel_number;
+		$book->save();
+        return response()->json(['responseText' => 'Success!']);
     }
 
     public function info($id) {

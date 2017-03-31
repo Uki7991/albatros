@@ -48,8 +48,7 @@
     <section id="rooms" class="numbers hidden-sm hidden-xs hidden-xs">
       
       <h2>НОМЕРА</h2>
-      <p>Garden hotel Bishkek оснащен 26-ю номерами трех категорий</p>
-
+      <span><img src="img/dekor1.png" alt=""></span>
       <div class="container">
         <div class="row">
           <div class="col-xs-4 card">
@@ -94,62 +93,62 @@
     <section id="galery" class="tour hidden-sm hidden-xs hidden-xs">
       
       <h2>ГАЛЕРЕЯ</h2>
-
-          <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:800px;height:456px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+      <span><img src="img/dekor1.png" alt=""></span>
+          <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:800px;height:656px;overflow:hidden;visibility:hidden;background-color:#24262e;">
               <!-- Loading Screen -->
               <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
                   <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                   <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
               </div>
-              <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:356px;overflow:hidden;">
+              <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:556px;overflow:hidden;">
                   <div>
-                      <img data-u="image" src="img/1.jpg" />
-                      <img data-u="thumb" src="img/1.jpg" />
+                      <img data-u="image" src="img/galery/1.jpg" />
+                      <img data-u="thumb" src="img/galery/1.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="img/2.jpg" />
-                      <img data-u="thumb" src="img/2.jpg" />
+                      <img data-u="image" src="img/galery/2.jpg" />
+                      <img data-u="thumb" src="img/galery/2.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="img/3.jpg" />
-                      <img data-u="thumb" src="img/3.jpg" />
+                      <img data-u="image" src="img/galery/3.jpg" />
+                      <img data-u="thumb" src="img/galery/3.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="img/4.jpg" />
-                      <img data-u="thumb" src="img/4.jpg" />
+                      <img data-u="image" src="img/galery/4.jpg" />
+                      <img data-u="thumb" src="img/galery/4.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="img/5.jpg" />
-                      <img data-u="thumb" src="img/5.jpg" />
+                      <img data-u="image" src="img/galery/5.jpg" />
+                      <img data-u="thumb" src="img/galery/5.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="img/6.jpg" />
-                      <img data-u="thumb" src="img/6.jpg" />
+                      <img data-u="image" src="img/galery/6.jpg" />
+                      <img data-u="thumb" src="img/galery/6.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="imag/07.jpg" />
-                      <img data-u="thumb" src="imag/thumb-07.jpg" />
+                      <img data-u="image" src="img/galery/07.jpg" />
+                      <img data-u="thumb" src="img/galery/07.jpg" />
                   </div>
                   <a data-u="any" href="http://www.jssor.com" style="display:none">Image Gallery</a>
                   <div>
-                      <img data-u="image" src="imag/08.jpg" />
-                      <img data-u="thumb" src="imag/thumb-08.jpg" />
+                      <img data-u="image" src="img/galery/08.jpg" />
+                      <img data-u="thumb" src="img/galery/08.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="imag/09.jpg" />
-                      <img data-u="thumb" src="imag/thumb-09.jpg" />
+                      <img data-u="image" src="img/galery/09.jpg" />
+                      <img data-u="thumb" src="img/galery/09.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="imag/10.jpg" />
-                      <img data-u="thumb" src="imag/thumb-10.jpg" />
+                      <img data-u="image" src="img/galery/10.jpg" />
+                      <img data-u="thumb" src="img/galery/10.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="imag/11.jpg" />
-                      <img data-u="thumb" src="imag/thumb-11.jpg" />
+                      <img data-u="image" src="img/galery/11.jpg" />
+                      <img data-u="thumb" src="img/galery/11.jpg" />
                   </div>
                   <div>
-                      <img data-u="image" src="imag/12.jpg" />
-                      <img data-u="thumb" src="imag/thumb-12.jpg" />
+                      <img data-u="image" src="img/galery/12.jpg" />
+                      <img data-u="thumb" src="img/galery/12.jpg" />
                   </div>
               </div>
               <!-- Thumbnail Navigator -->
@@ -180,8 +179,8 @@
       
       <div class="container">
         
-        <h2><strong>О НАС</strong></h2>
-
+        <h2>О НАС</h2>
+        <span><img src="img/dekor1.png" alt=""></span>
         <p><b>Albatros Hotel Bishkek</b> находится в Бишкеке, в 5 минутах езды от центра города, рядом с Ботаническим Садом в тихом уютном районе, в доступной близости от всех важнейших деловых, культурных и административных центров столицы Бишкек. К услугам гостей отеля Albatros Bishkek бесплатный Wi-Fi и круглосуточная стойка регистрации.</p>
         <br>
         <p>Номера оформлены в классическом стиле, в теплой цветовой гамме, обставлены итальянской мебелью из темного дерева и оснащены кондиционером. В числе удобств в каждом номере телевизор с плоским экраном, холодильник и собственная ванная комната, которая   оборудована всем необходимым. Albatros Hotel Bishkek  подойдет как для отдыха так и для деловой поездки, обеспечивая отдыхающим приятное и  расслабляющее пребывание.</p>
@@ -201,6 +200,7 @@
     <section id="service" class="inhotel hidden-sm hidden-xs hidden-xs">
         <div class="container">
             <h2>Наши услуги</h2>
+            <span><img src="img/dekor1.png" alt=""></span>
             <div class="wrapp">
               <p class="service">Трансеф из аэропорта</p>
               <p class="service">Завтрак</p>
@@ -232,12 +232,12 @@
     
         <div class="container container-mobile hidden-lg hidden-md">
           <ul>
-            <li><a href=""><i class="fa fa-bed" aria-hidden="true"></i>&nbsp;Номера<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></a></li>
-            <li><a href="/book"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;Бронирование<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></a></li>
-            <li><a href=""><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;Партнерам<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></a></li>
-            <li><a href=""><i class="fa fa-compass" aria-hidden="true"></i>&nbsp;Меcтоположение<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></a></li>
-            <li><a href=""><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Отзывы<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></a></li>
-            <li><a href=""><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;Новости<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></a></li>
+            <a href="/rooms"><li><i class="fa fa-bed" aria-hidden="true"></i>&nbsp;Номера<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></li></a>
+            <a class="booking-btn"><li><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;Бронирование<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></li></a>
+            <!-- <a href=""><li><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;Партнерам<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></li></a> -->
+            <a href="/map"><li><i class="fa fa-compass" aria-hidden="true"></i>&nbsp;Меcтоположение<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></li></a>
+            <!-- <a href=""><li><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Отзывы<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></li></a>
+            <a href=""><li><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;Новости<i class="fa fa-arrow-circle-right pull-right fa-lg" aria-hidden="true"></i></li></a> -->
           </ul>
         </div>
        

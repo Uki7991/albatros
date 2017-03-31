@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Отель Albatros</title>
 
@@ -28,66 +29,69 @@
         <a href="javascript:void(0)"><i class="fa fa-arrow-circle-o-up"></i></a>
     </div>
 
-    <div class="modal-form col-md-3 col-xs-10">
+
+    <div class="modal-success">
+      <p>Бронь на потверждении!</p>
+    </div>
+
+    
+
+
+    <div class="modal-form col-md-4 col-xs-12 col-sm-8">
       <i class="fa fa-times fa-lg" aria-hidden="true"></i>
       <div>
         <h4>Бронирование</h4>
-            <form action="/bookCreate" method="POST" class="form-horizontal">
+            <form class="form-horizontal" action="/bookCreate" method="POST" id="book">
                         {{ csrf_field() }}
                       
-                            <div>
-                                <div class="input-group">
+                                <div class="row">
                                     <label for="inputEmail3" class="control-label">Имя <i>*</i></label>
-                                
-                                <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="name" id="name" required>
                                 </div><!-- /input-group -->
-                            </div><!-- /.col-lg-6 -->
-                            <div>
-                                <div class="input-group">
+                            
+                                <div class="row">
                                     <label for="inputEmail3" class="control-label">Фамилия <i>*</i></label>
-                                    <input type="text" class="form-control" name="last_name">
+                                    <input type="text" class="form-control" name="last_name" id="last_name" required>
                                 </div><!-- /input-group -->
-                            </div><!-- /.col-lg-6 -->
-                              <div>
-                                <div class="input-group">
+                            
+                                <div class="row">
                                     <label for="inputEmail3" class="control-label">Номер телефона <i>*</i></label>
-                                    <input type="text" name="phone_number" class="form-control" placeholder="996123456789">
+                                    <input type="text" name="phone_number" class="form-control" placeholder="996123456789" id="phone_number"  required pattern="[0-9]{5,}">
                                 </div>
-                            </div>
-            
+                            
                           
                         <div class="row">
-                            <label for="">Дата приезда: <i>*</i></label>
-                            <select name="coming_day">
+                            <label for="" style="margin-top:10px;">Дата приезда: <i>*</i></label>
+                            <select name="coming_day" class="pull-right" id="coming_day">
                             @for ($i = 1; $i < 32; $i++)
                                 
                                 <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option> 
                             @endfor
                             </select>
-                            <select name="coming_month">
+                            <select name="coming_month" class="pull-right" id="coming_month">
                             @for ($i = 1; $i < 13; $i++)
                                 <option>@if($i < 10){{ 0 }}@endif{{ $i }}</option>
                             @endfor
                             </select>
-                            <select name="coming_year">
+                            <select name="coming_year" class="pull-right" id="coming_year">
                             @for ($i = 2017; $i < 2021; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                             </select>
                         </div>
                         <div class="row">
-                            <label for="">Дата выезда: <i>*</i></label>
-                            <select name="leaving_day">
+                            <label for="" style="margin-top:10px;">Дата выезда: <i>*</i></label>
+                            <select name="leaving_day" class="pull-right" id="leaving_day">
                             @for ($i = 1; $i < 32; $i++)
                                 <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option>
                             @endfor
                             </select>
-                            <select name="leaving_month">
+                            <select name="leaving_month" class="pull-right" id="leaving_month">
                             @for ($i = 1; $i < 13; $i++)
                                 <option>@if ($i < 10){{ 0 }}@endif{{ $i }}</option>
                             @endfor
                             </select>
-                            <select name="leaving_year">
+                            <select name="leaving_year" class="pull-right" id="leaving_year">
                             @for ($i = 2017; $i < 2021; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
@@ -95,11 +99,9 @@
                         </div>
                         <div class="row">
                             <label for="">Тип номера: <i>*</i></label>
-                            <select name="hotel_number" id="hotel_number">
-                              
-                            </select>
+                            <select name="hotel_number" id="hotel_number" id="hotel_number"></select>
                         </div>
-                        <button type="submit" class="btn btn-success btn-lg">Забронировать</button>
+                        <button type="submit" class="btn btn-success btn-lg submit-btn">Забронировать</button>
                     </form>
       </div>
     </div>
@@ -129,12 +131,12 @@
 
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/">Главная</a></li>
-              <li><a class="scrollto" href="/#rooms">Номера</a></li>
-              <li><a class="scrollto" href="/#galery">Галерея</a></li>
-              <li><a class="scrollto" href="/#info">О нас</a></li>
-              <li><a class="scrollto" href="/#service">Услуги</a></li>
-              <li><a class="scrollto" href="/#contacts">Контакты</a></li>
-              <li><a class="special-link .booking-btn">Бронирование</a></li>
+              <li><a class="scrollto" href="#rooms">Номера</a></li>
+              <li><a class="scrollto" href="#galery">Галерея</a></li>
+              <li><a class="scrollto" href="#info">О нас</a></li>
+              <li><a class="scrollto" href="#service">Услуги</a></li>
+              <li><a class="scrollto" href="#contacts">Контакты</a></li>
+              <li><a class="btn special-link booking-btn">Бронирование</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -172,7 +174,8 @@
 
 
     <section id="contacts" class="contact hidden-sm hidden-xs hidden-xs">
-      <h2>Контакты</h2>
+      <h2>Локация</h2>
+      <span><img src="img/dekor1.png" alt=""></span>
       <div id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.7227998053754!2d74.59090231513612!3d42.85758597915664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec9d560750f19%3A0x8d7fe2c21034932d!2z0J7RgtC10LvRjCAiRGVsdXhlSG90ZWwi!5e0!3m2!1sru!2skg!4v1490352090568" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
@@ -230,73 +233,6 @@
 
     <script src="/js/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="/js/jssor.slider-23.0.0.mini.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-
-            var jssor_1_SlideshowTransitions = [
-              {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:1200,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
-            ];
-
-            var jssor_1_options = {
-              $AutoPlay: 1,
-              $SlideshowOptions: {
-                $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_1_SlideshowTransitions,
-                $TransitionsOrder: 1
-              },
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,
-                $Cols: 10,
-                $SpacingX: 8,
-                $SpacingY: 8,
-                $Align: 360
-              }
-            };
-
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            /*responsive code begin*/
-            /*remove responsive code if you don't want the slider scales while window resizing*/
-            function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 800);
-                    jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            /*responsive code end*/
-        });
-    </script>
+    <script type="text/javascript" src="/js/slide.js"></script>
   </body>
 </html>
