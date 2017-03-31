@@ -510,6 +510,21 @@ h3 {
 	padding: 4px;
 	font-size: 12px !important;
 }
+
+.modal-success {
+	display: none;
+	position: fixed;
+	height: 300px;
+	background-color: green !important;
+	z-index: 9999;
+	padding: 60px;
+	color: #fff;
+}
+
+.modal-success p {
+	font-size: 16px;
+	text-transform: uppercase;
+}
 /*Galery slide*/
  /* jssor slider arrow navigator skin 05 css */
         /*

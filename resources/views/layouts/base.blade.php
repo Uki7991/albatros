@@ -29,30 +29,19 @@
         <a href="javascript:void(0)"><i class="fa fa-arrow-circle-o-up"></i></a>
     </div>
 
-    <div class="modal fade" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            <p>One fine body&hellip;</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+
+    <div class="modal-success">
+      <p>Бронь на потверждении!</p>
+    </div>
+
+    
 
 
     <div class="modal-form col-md-4 col-xs-12 col-sm-8">
       <i class="fa fa-times fa-lg" aria-hidden="true"></i>
       <div>
         <h4>Бронирование</h4>
-            <form class="form-horizontal" action="/bookCreate" method="POST">
+            <form class="form-horizontal" action="/bookCreate" method="POST" id="book">
                         {{ csrf_field() }}
                       
                                 <div class="row">

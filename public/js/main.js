@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
 
   	$('#go-top').click(function(){
@@ -35,12 +37,6 @@ $(document).ready(function(){
     });
 
 
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-
     $.ajax({
       url: "/book",
       success: function(data) {
@@ -52,6 +48,35 @@ $(document).ready(function(){
     });
 
 
+
+    $('.submit-btn').click(function(e) {
+      e.preventDefault(e);
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+      $.ajax({
+        type: "POST",
+        url: "/bookCreate",
+        data: {
+          'name': $('#name').val(),
+          'last_name': $('#last_name').val(),
+          'phone_number': $('#phone_number').val(),
+          'coming_day': $('#coming_day').val(),
+          'coming_month': $('#coming_month').val(),
+          'coming_year': $('#coming_year').val(),
+          'leaving_day': $('#leaving_day').val(),
+          'leaving_month': $('#leaving_month').val(),
+          'leaving_year': $('#leaving_year').val(),
+          'hotel_number': $('#hotel_number').val()
+        },
+        dataType: 'json',
+        success: function(data) {
+          $('.modal-success').fadeIn(300).delay(3000).fadeOut(300);
+        }
+      });
+    });
     
 
 });
